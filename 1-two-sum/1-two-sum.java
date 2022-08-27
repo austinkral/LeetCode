@@ -4,8 +4,7 @@ class Solution {
         for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
             if (map.containsKey(complement)) {
-                int[] result = new int[] {i, map.get(complement)};
-                return result;
+                return new int[] {i, map.get(complement)};
             } else {
                 map.put(nums[i], i);
             }
