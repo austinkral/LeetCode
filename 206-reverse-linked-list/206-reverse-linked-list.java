@@ -18,6 +18,5 @@ class Solution {
             curr = post;
         }
         return prev;
-    }
-    
+    }  
 }
