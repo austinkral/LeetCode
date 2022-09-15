@@ -8,6 +8,6 @@ class Solution {
                 map.put(nums[i], i);
             }
         } //for
-        return nums;
+        return new int [] {};
     } // twoSum
 } // Solution
