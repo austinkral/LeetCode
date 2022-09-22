@@ -1,6 +1,6 @@
 class Solution {
     public String reverseWords(String s) {
-        String answer = new String();
+        StringBuilder sb = new StringBuilder();
         StringBuilder w = new StringBuilder();
         char[] charray = s.toCharArray();
         int start = 0;
@@ -9,13 +9,13 @@ class Solution {
             idx++;
             if (c == ' ') {
                 w = new StringBuilder(s.substring(start, idx - 1));
-                answer += w.reverse().toString() + " ";
+                sb.append(w.reverse() + " ");
                 start = idx;
             } else if  (idx == charray.length) {
                 w = new StringBuilder(s.substring(start, idx));
-                answer += w.reverse().toString();
+                sb.append(w.reverse());
             } // if
         } // for
-        return answer;
+        return sb.toString();
     } // reverseWords
 } // Solution
