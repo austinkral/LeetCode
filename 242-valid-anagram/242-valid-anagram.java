@@ -3,7 +3,7 @@ class Solution {
         if (s.length() != t.length()) return false;
         HashMap<Character, Integer> freq = new HashMap<Character, Integer>();
         for (char c : s.toCharArray()) {
-            if (freq.containsKey(c)) freq.put(c, freq.get(c) + 1);
+            if (freq.containsKey(c)) freq.put(c, freq.getOrDefault(c, 0) + 1);
             else freq.put(c, 1);
         } // for
         for (char c : t.toCharArray()) {
