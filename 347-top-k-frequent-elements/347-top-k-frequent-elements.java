@@ -5,10 +5,12 @@ class Solution {
         Map<Integer, Integer> freq = new HashMap<Integer, Integer>();
         for (int i = 0; i < nums.length + 1; i++) {
             freqCount.add(new ArrayList<Integer>());
-        }
+        } // for
         int[] sol = new int[k];
         int solCount = 0;
-        for (int num : nums) freq.put(num, freq.getOrDefault(num, 0) + 1);
+        for (int num : nums) {
+            freq.put(num, freq.getOrDefault(num, 0) + 1);
+        } // for
         for (int key : freq.keySet()) {
             if (freqCount.get(freq.get(key)) == null) {
                 freqCount.set(freq.get(key), new ArrayList<Integer>());
@@ -21,5 +23,5 @@ class Solution {
                 } // for
         } // for
         return sol;
-    }
-}
+    } // topKFrequent
+} // Solution
