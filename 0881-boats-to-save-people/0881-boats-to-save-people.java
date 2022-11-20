@@ -8,14 +8,13 @@ class Solution {
             if (max < min) {
                 return output;
             } //if
-            if ((people[max] + people[min]) > limit) {
-                max--;
-            } else {
-                max--;
+            if (!(people[max] + people[min] > limit)) {
                 min++;
             } //if
             output++;
+            max--;
         } //for
         return output;
     } //numRescueBoats
-} // Solution
+} //Solution
+
